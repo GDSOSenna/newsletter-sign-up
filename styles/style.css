@@ -46,9 +46,9 @@ body{
 .left-box{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  margin: 70px 60px;
+  margin: 100px 60px;
   width: auto;
+  gap: 40px;
   line-height: 1.5em;
 }
 
@@ -69,37 +69,59 @@ form{
   flex-direction: column;
 }
 
+.email-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .email-address{
   font-size: 11px;
   font-weight: bold;
   height: auto;
 }
 
-input{
+.error{
+  display: none;
+  font-size: 11px;
+  font-weight: bold;
+  height: auto;
+  color: var(--color-tomato);
+}
+
+.error.errado{
+  display: block;
+}
+
+.email{
   display: flex;
   padding: 15px 25px;
   border-radius: 10px;
   border-style: ridge;
   border-color: var(--color-white);
+  cursor: pointer;
 }
 
-button{
+.email:focus{
+  outline: none;
+}
+
+.button{
   display: flex;
   justify-content: center;
   padding: 20px 35px;
-  font-weight: bold;
+  font-size: 16px;
   color: var(--color-white);
   background-color: var(--color-slate);
   border-radius: 10px;
   margin-top: 25px;
-  cursor: pointer;
-  transition: 0.2s;
 }
 
-button:hover{
-  background: var(--color-tomato);
-  border-color: var(--color-tomato);
+.button:hover{
+  background: linear-gradient(to right,hsla(328, 75%, 61%, 0.837), hsl(4, 100%, 67%) );
+  border-style: none;
   box-shadow: 0px 22px 50px -21px hsl(4, 100%, 67%);
+  cursor: pointer;
 }
 
 .right-box{
@@ -109,3 +131,56 @@ button:hover{
   margin-bottom: 25px;
 }
 
+.email.errado{
+  border: 2px solid var(--color-tomato);
+}
+
+.validation{
+  background-color: var(--color-white);
+  height: 500px;
+  width: 480px;
+  border-radius: 40px;
+  display: none;
+  align-items: center;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px;
+  height: 380px;
+  gap: 15px;
+}
+
+.confirm{
+  width: 64px;
+  object-fit: cover;
+}
+
+.thanks{
+  font-size: 50px;
+}
+
+.textThanks{
+  line-height: 1.8em;
+  font-size: 14px;
+}
+
+.bt1{
+  display: flex;
+  justify-content: center;
+  padding: 20px 35px;
+  font-size: 16px;
+  color: var(--color-white);
+  background-color: var(--color-slate);
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.bt1:hover{
+  background: linear-gradient(to right,hsla(328, 75%, 61%, 0.837), hsl(4, 100%, 67%) );
+  border-style: none;
+  box-shadow: 0px 22px 50px -21px hsl(4, 100%, 67%);
+  cursor: pointer;
+}

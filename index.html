@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
   
   <title>Newsletter sign-up form with success message</title>
 
@@ -20,18 +20,29 @@
           <li><img src="assets/images/icon-list.svg" alt="list-icon">Measuring to ensure updates are a success</li>
           <li><img src="assets/images/icon-list.svg" alt="list-icon">And much more!</li>
         </ul>
-        <form>
-          <label class="email-address">Email address</label>
-          <input type="email" placeholder="email@company.com">
-          <button>Subscribe to monthly newsletter</button>
+        <form id="form">
+          <div class="email-box">
+            <label class="email-address" for="email">Email address</label>
+            <span class="error" id="error">Valid email required</span>
+          </div>
+          <input id="email" class="email" type="text" placeholder="email@company.com">
+          <button class="button" type="submit" onclick="validation()">Subscribe to monthly newsletter</button>
         </form>
       </div>
       <div class="right-box">
         <img src="assets/images/illustration-sign-up-desktop.svg" alt="desktop">
       </div>
     </section>
+    <section class="validation" id="validation">
+      <div class="box">
+        <img class="confirm" src="../assets/images/icon-success.svg">
+        <h1 class="thanks">Thanks for subscribing!</h1>
+        <p class="textThanks"></p>
+        <button class="bt1">Dismiss message</button>
+      </div>
+    </section>
   </main>
 
-
+  <script src="script.js"></script>
 </body>
 </html>

@@ -25,6 +25,7 @@ p{
 
 body{
   background-color: var(--color-charcoal);
+  overflow-x: hidden;
 }
 
 .container{
@@ -102,6 +103,10 @@ form{
   cursor: pointer;
 }
 
+.email.errado{
+  border: 2px solid var(--color-tomato);
+}
+
 .email:focus{
   outline: none;
 }
@@ -131,8 +136,8 @@ form{
   margin-bottom: 25px;
 }
 
-.email.errado{
-  border: 2px solid var(--color-tomato);
+#illus-mob{
+  display: none;
 }
 
 .validation{
@@ -140,7 +145,7 @@ form{
   height: 500px;
   width: 480px;
   border-radius: 40px;
-  display: none;
+  display: flex;
   align-items: center;
 }
 
@@ -183,4 +188,77 @@ form{
   border-style: none;
   box-shadow: 0px 22px 50px -21px hsl(4, 100%, 67%);
   cursor: pointer;
+}
+
+@media (max-width: 1050px){
+
+  .container{
+    width: 100%;
+    height: 100svh;
+  }
+
+  .content{
+    width: 390px;
+    height: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  .left-box{
+    margin: 50px 30px;
+    height: auto;
+  }
+
+  .button{
+    margin-top: 25px;
+  }
+
+  #check{
+    height: 21px;
+  }
+
+  .right-box{
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+
+  #illus-desk{
+    display: none;
+  }
+
+  #illus-mob{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .validation{
+    width: 390px;
+    height: 100vmax;
+    border-radius: 0;
+  }
+
+  .box{
+    height: auto;
+    margin: 150px 25px 40px 25px;
+    gap: 2rem;
+  }
+
+  .thanks{
+    font-size: 40px;
+  }
+  
+  .textThanks{
+    font-size: 16px;
+  }
+
+  .bt1{
+    margin-top: 200px;
+  }
+
 }

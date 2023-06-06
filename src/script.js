@@ -15,6 +15,7 @@ function checkInputs(){
     errorValidation(email, error)
   }else{
     successValidation(email, error)
+    window.location.href = '/pages/Confirmation.html'
   }
 }
 
@@ -42,3 +43,4 @@ function checkValidity(email){
   }
   return false
 }
+

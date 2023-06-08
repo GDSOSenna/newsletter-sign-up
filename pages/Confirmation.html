@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Email confirmation</title>
   <link rel="stylesheet" href="../styles/style.css">
+
+  <script defer src="../src/email.js"></script>
   
 </head>
 <body>
@@ -14,8 +16,10 @@
       <div class="box">
         <img class="confirm" src="../assets/images/icon-success.svg">
         <h1 class="thanks">Thanks for subscribing!</h1>
-        <p class="textThanks">A confirmation email has been sent to 'email@email.com'. Please open it and click the button inside to confirm your subscripition.</p>
-        <button class="bt1">Dismiss message</button>
+        <div>
+          <p class="text-thank">A confirmation email has been sent to <strong id="strong"></strong>. Please open it and click the button inside to confirm your subscripition.</p>
+        </div>
+        <button class="bt1" onclick="dismiss()">Dismiss message</button>
       </div>
     </section>
   </main>

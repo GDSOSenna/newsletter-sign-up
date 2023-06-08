@@ -2,6 +2,12 @@ const form = document.getElementById('form')
 const email = document.getElementById('email')
 const error = document.getElementById('error')
 
+function storage(){
+  const hold = document.getElementById('email').value
+  localStorage.setItem('useremail', hold)
+  console.log(hold)
+}
+
 form.addEventListener('submit', (e) =>{
   e.preventDefault()
   checkInputs()

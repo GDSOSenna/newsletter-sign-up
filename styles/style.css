@@ -107,6 +107,11 @@ form{
   border: 2px solid var(--color-tomato);
 }
 
+.email.errado:defined{
+  background-color: hsla(4, 69%, 76%, 0.438);
+  color: red;
+}
+
 .email:focus{
   outline: none;
 }
@@ -167,7 +172,7 @@ form{
   font-size: 50px;
 }
 
-.textThanks{
+.text-thank{
   line-height: 1.8em;
   font-size: 14px;
 }
